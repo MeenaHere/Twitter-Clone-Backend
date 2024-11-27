@@ -24,7 +24,7 @@ const MongoDBStoreSession = MongoDBStore(session);
 // Middleware
 app.use(bodyParser.json()); // Parse application/json
 app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
-/* app.use(cors()); */
+app.use(cors()); 
 
 // Session and Flash Middleware
 const store = new MongoDBStoreSession({
@@ -33,7 +33,7 @@ const store = new MongoDBStoreSession({
 });
 
 
-/* app.use(cors()); */
+/* app.use(cors()); 
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://x-twitter-clone-react.netlify.app/"],
@@ -41,7 +41,7 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
-);
+); */
 
 
 app.use(
